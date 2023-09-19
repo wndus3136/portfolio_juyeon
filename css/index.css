@@ -1014,6 +1014,7 @@ li {
   /* text_inner */
   /* text_inner1 */
   /* text_inner2 */
+  /* text_inner3 */
 }
 .wrap #page3 .plan_pop .plan_pop_txt .plan_pop_inner > h5 {
   font-size: 28px;
@@ -1080,6 +1081,9 @@ li {
 }
 .wrap #page3 .plan_pop .plan_pop_txt .plan_pop_inner .text_inner2 .inner_right > p > a {
   width: 91px;
+}
+.wrap #page3 .plan_pop .plan_pop_txt .plan_pop_inner .text_inner3 .inner_right > p > a {
+  width: 135px;
 }
 .wrap #page3 .plan_pop .plan_pop_txt .plan_pop_inner .text_inner4 .inner_right > p > a {
   width: 60px;
