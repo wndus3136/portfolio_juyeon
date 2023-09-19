@@ -314,22 +314,6 @@ li {
                 }
             }
 
-            .tag {
-                position: absolute;
-                bottom: 150px;
-                left: 200px;
-                width: 200px;
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-                background-color: $color;
-                box-shadow: 2px 2px 2px 2px #999;
-                color: #fff;
-                font-weight: bold;
-                /* letter-spacing: 7px; */
-                border-radius: 10px 0 0 10px;
-            }
-
         }
 
     }
@@ -965,6 +949,9 @@ li {
                     color: #fff;
                 }
             }
+            .plan_sheet3{
+                background-color: #E1D5B9;
+            }
             .plan_pop4_img{
                 background-color: rgb(54, 85, 126);
                 >p{
@@ -1057,6 +1044,100 @@ li {
                             text-align: center;
                         }
 
+                        &:first-child {
+                            display: block;
+                        }
+                    }
+                }
+
+
+                /* plan_tab3 */
+                .plan_tab3 {
+                    width: 100%;
+                    height: 50px;
+                    margin: 0 auto;
+                    padding: 0 100px;
+                    box-sizing: border-box;
+                    background-color: #444;
+
+                    >li {
+                        float: left;
+                        width: 200px;
+                        text-align: center;
+                        line-height: 50px;
+                        color: #E1D5B9;
+                        cursor: pointer;
+
+                        &:hover {
+                            font-size: 21px;
+
+                        }
+                    }
+
+                    .choice3 {
+                        background-color: #E1D5B9;
+                        color: #444;
+                        font-weight: bold;
+                        border-radius: 5px 5px 0 0;
+                    }
+                }
+
+                .plan_sheet3 {
+                    background-color: #E1D5B9;
+                    height: 850px;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+
+                    >li {
+                        display: none;
+
+                        &:nth-child(1) {
+                            width: 800px;
+                            margin: 0 auto;
+                            margin-top: 50px;
+                            >div{
+                                >img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            width: 800px;
+                            margin: 0 auto;
+                            margin-top: 50px;
+                        }
+
+                        &:nth-child(3) {
+                            width: 800px;
+                            margin: 0 auto;
+                            >div{
+                                height: 800px;
+                                overflow: scroll;
+                                overflow-x: hidden; /* 가로스크롤 없애기 */
+                                &::-webkit-scrollbar {
+                                    width: 15px;
+                                }
+                                &::-webkit-scrollbar-thumb {
+                                    height: 30%;
+                                    background: #444;
+                                }
+                               
+                                >img{
+                                    width: 130%;
+                                    opacity: 0.8;
+                                    transform: translateX(-120px);
+    
+                                }
+                            }
+                        }
+
+                        >video {
+                            width: 100%;
+                            text-align: center;
+                        }
                         &:first-child {
                             display: block;
                         }
@@ -1237,31 +1318,6 @@ li {
 
         }/* plan_pop2 */
 
-        .plan_pop3{
-            .plan_pop3_img{
-
-                >div{
-                    overflow: scroll;
-                    overflow-x: hidden;
-                    height: 850px;
-                    &::-webkit-scrollbar{
-                        width: 10px;
-                    }
-                    &::-webkit-scrollbar-thumb{
-                        height: 30%;
-                        background: #777;
-                    }
-                    
-
-                    >img{
-                        transform: translateX(-80px);
-                        width: 120%; 
-                        opacity: 0.8;
-                }
-             
-                }
-            }
-        }
         .plan_pop4{
             .plan_pop4_img{
                 width: 860px;

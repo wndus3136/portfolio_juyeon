@@ -183,7 +183,7 @@ $(function () {
     tab3.addEventListener('click', function () {
         pageBack.src = "./image/back_3.jpg"
     });
-    
+
     tab4.addEventListener('click', function () {
         pageBack.src = "./image/back_4.jpg"
     });
@@ -217,6 +217,17 @@ $(document).ready(function () {
         $('.plan_sheet > li').fadeOut(0)
         $('.plan_sheet > li').eq(i).fadeIn()
     }) //plan_tab
+
+    $('.plan_tab3 > li').click(function () {
+        $('.plan_tab3 > li').removeClass('choice3')
+        $(this).addClass('choice3')
+
+        let i = $(this).index()
+
+        $('.plan_sheet3 > li').fadeOut(0)
+        $('.plan_sheet3 > li').eq(i).fadeIn()
+    }) //plan_tab3
+
 
 
 
@@ -259,165 +270,159 @@ $('.wrap > div').mousewheel(function (event, delta) {
 
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    const progress = document.querySelector('.right .progress');
-    const progress1 = document.querySelector('.right1 .progress');
-    const progress2 = document.querySelector('.right2 .progress');
-    const progress3 = document.querySelector('.right3 .progress');
-    const numb = document.querySelector('.numb');
-    const numb1 = document.querySelector('.numb1');
-    const numb2 = document.querySelector('.numb2');
-    const numb3 = document.querySelector('.numb3');
+            const progress = document.querySelector('.right .progress');
+            const progress1 = document.querySelector('.right1 .progress');
+            const progress2 = document.querySelector('.right2 .progress');
+            const progress3 = document.querySelector('.right3 .progress');
+            const numb = document.querySelector('.numb');
+            const numb1 = document.querySelector('.numb1');
+            const numb2 = document.querySelector('.numb2');
+            const numb3 = document.querySelector('.numb3');
 
-    let counter = 50;
-    let counter1 = 50;
-    let counter2 = 50;
-    let counter3 = 50;
+            let counter = 50;
+            let counter1 = 50;
+            let counter2 = 50;
+            let counter3 = 50;
 
-    function startAnimation() {
-        progress.style.animation = 'right 3s linear both';
-        progress1.style.animation = 'right1 3s linear both';
-        progress2.style.animation = 'right2 3s linear both';
-        progress3.style.animation = 'right3 3s linear both';
+            function startAnimation() {
+                progress.style.animation = 'right 3s linear both';
+                progress1.style.animation = 'right1 3s linear both';
+                progress2.style.animation = 'right2 3s linear both';
+                progress3.style.animation = 'right3 3s linear both';
 
-        setInterval(() => {
-            if (counter === 95) {
-                clearInterval();
-            } else {
-                counter += 1;
-                numb.textContent = counter + '%';
+                setInterval(() => {
+                    if (counter === 95) {
+                        clearInterval();
+                    } else {
+                        counter += 1;
+                        numb.textContent = counter + '%';
+                    }
+                }, 62);
+
+                setInterval(() => {
+                    if (counter1 === 95) {
+                        clearInterval();
+                    } else {
+                        counter1 += 1;
+                        numb1.textContent = counter1 + '%';
+                    }
+                }, 62);
+
+                setInterval(() => {
+                    if (counter2 === 80) {
+                        clearInterval();
+                    } else {
+                        counter2 += 1;
+                        numb2.textContent = counter2 + '%';
+                    }
+                }, 62);
+
+                setInterval(() => {
+                    if (counter3 === 70) {
+                        clearInterval();
+                    } else {
+                        counter3 += 1;
+                        numb3.textContent = counter3 + '%';
+                    }
+                }, 62);
+            } //게이지 숫자 증가
+
+            function handleScroll() {
+                const page2Element = document.getElementById('page2');
+                const rect = page2Element.getBoundingClientRect();
+
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    startAnimation();
+                    window.removeEventListener('scroll', handleScroll);
+                }
             }
-        }, 62);
 
-        setInterval(() => {
-            if (counter1 === 95) {
-                clearInterval();
-            } else {
-                counter1 += 1;
-                numb1.textContent = counter1 + '%';
-            }
-        }, 62);
-
-        setInterval(() => {
-            if (counter2 === 80) {
-                clearInterval();
-            } else {
-                counter2 += 1;
-                numb2.textContent = counter2 + '%';
-            }
-        }, 62);
-
-        setInterval(() => {
-            if (counter3 === 70) {
-                clearInterval();
-            } else {
-                counter3 += 1;
-                numb3.textContent = counter3 + '%';
-            }
-        }, 62);
-    } //게이지 숫자 증가
-
-    function handleScroll() {
-        const page2Element = document.getElementById('page2');
-        const rect = page2Element.getBoundingClientRect();
-
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-            startAnimation();
-            window.removeEventListener('scroll', handleScroll);
-        }
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    //page2가 되면 실행
+            window.addEventListener('scroll', handleScroll);
+            //page2가 되면 실행
 
 
-    const circulars = document.querySelectorAll('.circular');
-    const skillPages = document.querySelectorAll('.skill_page');
-    const skilltext = document.querySelector('.skill_text');
+            const circulars = document.querySelectorAll('.circular');
+            const skillPages = document.querySelectorAll('.skill_page');
+            const skilltext = document.querySelector('.skill_text');
 
-    circulars.forEach((circular, index) => {
-        circular.addEventListener('mouseover', () => {
-            skillPages[index].style.display = 'block';
-            skilltext.style.display = 'none';
-        });
-
-        circular.addEventListener('mouseout', () => {
-            skillPages[index].style.display = 'none';
-            skilltext.style.display = 'block';
-        });
-    }); //skill_hover text
-
-
-
-  
-    //plan_pop click close 
-    document.querySelector('.plan_1').addEventListener('click', () => {
-        document.querySelector('.plan_pop').style.display = 'block';
-    }, 300);
-
-    document.querySelector('.plan_pop_btn').addEventListener('click', () => {
-        document.querySelector('.plan_pop').style.display = 'none';
-    }, 300);
-    /* plan_1 */
-
-    document.querySelector('.plan_2').addEventListener('click', () => {
-        document.querySelector('.plan_pop2').style.display = 'block';
-    }, 300);
-
-    document.querySelector('.plan_pop2_btn').addEventListener('click', () => {
-        document.querySelector('.plan_pop2').style.display = 'none';
-    }, 300);
-    /* plan_2 */
-
-    document.querySelector('.plan_3').addEventListener('click', () => {
-        document.querySelector('.plan_pop3').style.display = 'block';
-    }, 300);
-
-    document.querySelector('.plan_pop3_btn').addEventListener('click', () => {
-        document.querySelector('.plan_pop3').style.display = 'none';
-    }, 300);
-    /* plan_3 */
-
-    document.querySelector('.plan_4').addEventListener('click', () => {
-        document.querySelector('.plan_pop4').style.display = 'block';
-    }, 300);
-
-    document.querySelector('.plan_pop4_btn').addEventListener('click', () => {
-        document.querySelector('.plan_pop4').style.display = 'none';
-    }, 300);
-    /* plan_4 */
-
-
-
-
-
-});
-
-$(document).ready(function () {
-    $('input[name=submit]').click(function (event) {
-        event.preventDefault(); // 폼 제출을 방지합니다.
-
-        var name = $('input[name=name]').val();
-        var email = $('input[name=email]').val();
-        var message = $('textarea[name=message]').val();
-
-        if (name === '' || email === '' || message === '') {
-            alert('이름, 이메일, 메시지는 필수 입력 사항입니다.');
-        } else {
-            var templateParams = {
-                name: name,
-                email: email,
-                message: message,
-                phone: $('input[name=phone]').val()
-            };
-
-            emailjs.send("wndus3136@gmail.com", "template_m96llhh", templateParams)
-                .then(function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('이메일이 성공적으로 전송되었습니다.');
-                }, function (error) {
-                    console.log('FAILED...', error);
-                    alert('이메일 전송에 실패했습니다. 다시 시도해주세요.');
+            circulars.forEach((circular, index) => {
+                circular.addEventListener('mouseover', () => {
+                    skillPages[index].style.display = 'block';
+                    skilltext.style.display = 'none';
                 });
-        }
-    });
-});
+
+                circular.addEventListener('mouseout', () => {
+                    skillPages[index].style.display = 'none';
+                    skilltext.style.display = 'block';
+                });
+            }); //skill_hover text
+
+
+
+
+            /*  */
+            //plan_pop click close 
+            document.querySelector('.plan_1').addEventListener('click', () => {
+                document.querySelector('.plan_pop').style.display = 'block';
+            });
+            document.querySelector('.plan_pop_btn').addEventListener('click', () => {
+                document.querySelector('.plan_pop').style.display = 'none';
+            });
+            /* plan_1 */
+
+            document.querySelector('.plan_2').addEventListener('click', () => {
+                document.querySelector('.plan_pop2').style.display = 'block';
+            });
+            document.querySelector('.plan_pop2_btn').addEventListener('click', () => {
+                document.querySelector('.plan_pop2').style.display = 'none';
+            });
+            /* plan_2 */
+
+            document.querySelector('.plan_3').addEventListener('click', () => {
+                document.querySelector('.plan_pop3').style.display = 'block';
+            });
+            document.querySelector('.plan_pop3_btn').addEventListener('click', () => {
+                document.querySelector('.plan_pop3').style.display = 'none';
+            });
+            /* plan_3 */
+
+            document.querySelector('.plan_4').addEventListener('click', () => {
+                document.querySelector('.plan_pop4').style.display = 'block';
+            });
+            document.querySelector('.plan_pop4_btn').addEventListener('click', () => {
+                document.querySelector('.plan_pop4').style.display = 'none';
+            });
+            /* plan_4 */
+
+        });
+
+
+            $(document).ready(function () {
+                $('input[name=submit]').click(function (event) {
+                    event.preventDefault(); // 폼 제출을 방지합니다.
+
+                    var name = $('input[name=name]').val();
+                    var email = $('input[name=email]').val();
+                    var message = $('textarea[name=message]').val();
+
+                    if (name === '' || email === '' || message === '') {
+                        alert('이름, 이메일, 메시지는 필수 입력 사항입니다.');
+                    } else {
+                        var templateParams = {
+                            name: name,
+                            email: email,
+                            message: message,
+                            phone: $('input[name=phone]').val()
+                        };
+
+                        emailjs.send("wndus3136@gmail.com", "template_m96llhh", templateParams)
+                            .then(function (response) {
+                                console.log('SUCCESS!', response.status, response.text);
+                                alert('이메일이 성공적으로 전송되었습니다.');
+                            }, function (error) {
+                                console.log('FAILED...', error);
+                                alert('이메일 전송에 실패했습니다. 다시 시도해주세요.');
+                            });
+                    }
+                });
+            });
