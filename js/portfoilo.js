@@ -1,9 +1,3 @@
-/* new kursor({
-    type: 1,
-    removeDefaultCursor: true,
-    color: "#efc102"
-}) */
-
 $(function () {
     const btn = $('.lnb ul li')
     const page = $('.wrap > div')
@@ -56,8 +50,12 @@ $(function () {
         }, 1000)
     }) //btn_click_event
 
+     /*********************************************************/
+     var h1 = document.querySelector("h1");
 
-
+     h1.addEventListener("input", function() {
+       this.setAttribute("data-heading", this.innerText);
+     });
     /*********************************************************/
 
     const $text = document.querySelector(".typing .text");
@@ -69,7 +67,7 @@ $(function () {
     ];
 
     // 글자 입력 속도
-    const textSpeed = 100;
+    const textSpeed = 150;
     let textIndex = 0;
 
     // 타이핑 효과
@@ -208,14 +206,14 @@ $(document).ready(function () {
         $('.Project_sheet > li').eq(i).fadeIn()
     }) //sheet_tab
 
-    $('.plan_tab > li').click(function () {
-        $('.plan_tab > li').removeClass('choice')
+    $('.plan_tab1 > li').click(function () {
+        $('.plan_tab1 > li').removeClass('choice')
         $(this).addClass('choice')
 
         let i = $(this).index()
 
-        $('.plan_sheet > li').fadeOut(0)
-        $('.plan_sheet > li').eq(i).fadeIn()
+        $('.plan_sheet1 > li').fadeOut(0)
+        $('.plan_sheet1> li').eq(i).fadeIn()
     }) //plan_tab
 
     $('.plan_tab3 > li').click(function () {
@@ -227,10 +225,6 @@ $(document).ready(function () {
         $('.plan_sheet3 > li').fadeOut(0)
         $('.plan_sheet3 > li').eq(i).fadeIn()
     }) //plan_tab3
-
-
-
-
 })
 
 
@@ -318,7 +312,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }, 62);
 
                 setInterval(() => {
-                    if (counter3 === 70) {
+                    if (counter3 === 75) {
                         clearInterval();
                     } else {
                         counter3 += 1;
@@ -331,7 +325,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 const page2Element = document.getElementById('page2');
                 const rect = page2Element.getBoundingClientRect();
 
-                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                const threshold = 5;
+
+                if (rect.top >= -threshold && rect.bottom <= window.innerHeight + threshold) {
                     startAnimation();
                     window.removeEventListener('scroll', handleScroll);
                 }
@@ -397,32 +393,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
 
 
-            $(document).ready(function () {
-                $('input[name=submit]').click(function (event) {
-                    event.preventDefault(); // 폼 제출을 방지합니다.
-
-                    var name = $('input[name=name]').val();
-                    var email = $('input[name=email]').val();
-                    var message = $('textarea[name=message]').val();
-
-                    if (name === '' || email === '' || message === '') {
-                        alert('이름, 이메일, 메시지는 필수 입력 사항입니다.');
-                    } else {
-                        var templateParams = {
-                            name: name,
-                            email: email,
-                            message: message,
-                            phone: $('input[name=phone]').val()
-                        };
-
-                        emailjs.send("wndus3136@gmail.com", "template_m96llhh", templateParams)
-                            .then(function (response) {
-                                console.log('SUCCESS!', response.status, response.text);
-                                alert('이메일이 성공적으로 전송되었습니다.');
-                            }, function (error) {
-                                console.log('FAILED...', error);
-                                alert('이메일 전송에 실패했습니다. 다시 시도해주세요.');
-                            });
-                    }
-                });
+        $(document).ready(function () {
+            $('input[name=submit]').click(function (event) {
+                event.preventDefault(); // 폼 제출을 방지합니다.
+                var name = $('input[name=name]').val();
+                var email = $('input[name=email]').val();
+                var message = $('textarea[name=message]').val();
+                if (name === '' || email === '' || message === '') {
+                    alert('이름, 이메일, 메시지는 필수 입력 사항입니다.');
+                } else {
+                    var templateParams = {
+                        name: name,
+                        email: email,
+                        message: message,
+                        phone: $('input[name=phone]').val()
+                    };
+                    emailjs.send("wndus3136@gmail.com", "template_m96llhh", templateParams)
+                        .then(function (response) {
+                            console.log('SUCCESS!', response.status, response.text);
+                            alert('이메일이 성공적으로 전송되었습니다.');
+                        }, function (error) {
+                            console.log('FAILED...', error);
+                            alert('이메일 전송에 실패했습니다. 다시 시도해주세요.');
+                        });
+                }
             });
+        });

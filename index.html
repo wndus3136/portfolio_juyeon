@@ -8,7 +8,9 @@
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/js/jquery-3.6.4.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap">
     <!-- <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
     <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script> -->
     <script src="./js/js/jquery.scrollTo.min.js"></script>
@@ -17,29 +19,14 @@
 </head>
 
 <body>
-    <!--  <div class="header" id="header">
-        <div class="header_bg"></div>
-        <div class="logo">
-            <a href="#main">
-                <img src="./image/logo_1.png" alt="">
-                <img src="./image/logo_2.png" alt="">
-            </a>
-        </div>
-        <nav class="lnb">
-            <ul>
-                <li><a href="#page1">About me</a></li>
-                <li><a href="#page2">MySkill</a></li>
-                <li><a href="#page3">Project</a></li>
-                <li><a href="#page4">Content</a></li>
-            </ul>
-        </nav>
-    </div> -->
     <!-- header -->
+
     <ul class="indicate">
+
         <li class="on"></li>
         <li>
             <a href="#page1">
-                <p>About me</p>
+                <p class="font-bold">About me</p>
                 <div class="indi_btn"></div>
             </a>
         </li>
@@ -64,30 +51,32 @@
     </ul>
     <div class="wrap" id="wrap">
         <div class="main_page" id="main">
-            <img src="./image/back_1.jpg" alt="back_1">
-            <div class="main_box">
+            <img class="bg_wrap" src="./image/back_1.jpg" alt="back_1">
+            <div class="main_box page_container">
                 <div class="typing">
-                    <p>안녕하세요. <br>시작을 두려워하지 않는 프론트엔드 개발자 &nbsp;</p>
-                    <img src="./image/dot_1.png" alt="dot_1">
-                    <p class="text"></p>
-                    <img src="./image/dot_2.png" alt="dot_2">
-                    <p>입니다.</p>
+                    <p>시작을 두려워하지 않는 프론트엔드 개발자 ' <span class="text"></span> ' 입니다.</p>
+                </div>
+
+                <div class="main_img">
+                    <h1 contenteditable data-heading="이주연">
+                        이주연
+                    </h1>
                 </div>
                 <div class="resume">
                     <ul>
-                        <img src="./image/triangle_1.png" alt="icon1">
+                        <img src="./image/triangle_4.png" alt="icon1">
                         <li><a href="./file/resume.pdf" target='_blank'>이력서보기 /</a></li>
                         <li><a href="./file/resume.pdf" download>다운로드</a></li>
                     </ul>
                 </div>
-                <div class="my_image">
-     <!--                <img src="./image/img1.jpg" alt="img1"> -->
+                <div class="main_icon">
+                    <i class="fas fa-angle-double-down"></i>
                 </div>
             </div><!-- main_box -->
         </div>
         <div id="page1">
             <!--  <img src="./image/back_1.jpg" alt="back_1"> -->
-            <div class="page_box">
+            <div class="page_box page_container">
                 <p>About me</p>
                 <div class="page_inner">
                     <div class="page1_tit">
@@ -98,9 +87,9 @@
                         <div>
                             <ul>
                                 <li>
-                                    <img src="./image/triangle.png" alt="">
-                                    <img src="./image/triangle.png" alt="">
-                                    <img src="./image/triangle.png" alt="">
+                                    <img src="./image/triangle_5.png" alt="">
+                                    <img src="./image/triangle_5.png" alt="">
+                                    <img src="./image/triangle_5.png" alt="">
                                 </li>
                                 <li>
                                     <p>이름</p>
@@ -109,16 +98,15 @@
                                 </li>
                                 <li class="info">
                                     <p>이 주 연 (LEE JU YEON)</p>
-                                    <p>부산 부산진구 부전 <span>
-                                            <!-- (서울 거주가능) --></span></p>
+                                    <p>서울 중구 신당동</p>
                                     <p>wndus3136@gmail.com</p>
                                 </li>
                             </ul>
                             <ul>
                                 <li>
-                                    <img src="./image/triangle.png" alt="">
-                                    <img src="./image/triangle.png" alt="">
-                                    <img src="./image/triangle.png" alt="">
+                                    <img src="./image/triangle_5.png" alt="">
+                                    <img src="./image/triangle_5.png" alt="">
+                                    <img src="./image/triangle_5.png" alt="">
                                 </li>
                                 <li>
                                     <p>생년월일</p>
@@ -161,16 +149,15 @@
             </div>
         </div>
         <div id="page2">
-            <div class="page_box">
+            <div class="page_box page_container">
                 <p>MySkill</p>
                 <div class="blink5">
-                    icon Hover !
+                    Mouse over !
                 </div>
                 <div class="page_img">
                     <img src="./image/logo_2.png" alt="">
                 </div>
                 <div class="page_inner">
-
                     <ul class="my_skill">
                         <li class="circular">
                             <div class="inner">
@@ -303,7 +290,7 @@
         </div>
         <div id="page3">
             <img class="page3_back" id="page_back" src="./image/back_1.jpg" alt="">
-            <div class="page_box">
+            <div class="page_box page_container">
                 <p>Project</p>
                 <div class="blink3">
                     Click !
@@ -319,12 +306,12 @@
                 </ul>
                 <ul class="Project_sheet">
                     <li>
-                        <div class="tab_box">
-                            <div class="tab_img"><img src="./file/wev_mobile_1.png" alt=""></div>
-                            <div class="tab_inner">
-                                <div class="tab_txt">
-                                    <h5>국립현대 미술관</h5>
-                                    <p>반응형 UI/UX 웹사이트 제작</p>
+                        <div class="tab_img"><img src="./file/wev_mobile_1.png" alt=""></div>
+                        <div class="tab_inner">
+                            <div class="tab_txt">
+                                <h5>국립현대 미술관</h5>
+                                <p>반응형 UI/UX 웹사이트 제작</p>
+                                <div class="tab_tit">
                                     <ul class="tab_inner_left">
                                         <li>DEVICE</li>
                                         <li>TOOL</li>
@@ -337,25 +324,26 @@
                                         <li>HTML, CSS, jQuery, JavaScript</li>
                                         <li>4주 (기획, 코딩)</li>
                                     </ul>
-                                    <div class="page3_btn" id="btn01">
-                                        <button class="plan_1"><a href="#!">PLAN</a></button>
-                                        <!-- <button><a href="#!">Github</a></button> -->
-                                        <button><a href="https://wndus3136.github.io/GHMuseum" target='_blank'>WEBSITE</a></button>
-                                        <button><a href="#!">GITHUB</a></button>
-                                    </div>
-
+                                </div>
+                                <div class="page3_btn" id="btn01">
+                                    <button class="plan_1"><a href="#!">PLAN</a></button>
+                                    <!-- <button><a href="#!">Github</a></button> -->
+                                    <button><a href="https://wndus3136.github.io/GHMuseum"
+                                            target='_blank'>WEBSITE</a></button>
+                                    <button><a href="https://github.com/wndus3136/GHMuseum" target="_blank">GITHUB</a></button>
                                 </div>
 
                             </div>
+
                         </div>
                     </li>
                     <li>
-                        <div class="tab_box">
+                        <div class="tab_inner">
                             <div class="tab_img"><img src="./file/web_2.png" alt=""></div>
-                            <div class="tab_inner">
-                                <div class="tab_txt">
-                                    <h5>JO MALONE <span>LONDON</span></h5>
-                                    <p>페이지네이션, 필터, 포토리뷰 작성 및 등록</p>
+                            <div class="tab_txt">
+                                <h5>JO MALONE <span>LONDON</span></h5>
+                                <p>페이지네이션, 필터, 포토리뷰 작성 및 등록</p>
+                                <div class="tab_tit">
                                     <ul class="tab_inner_left">
                                         <li>DEVICE</li>
                                         <li>TOOL</li>
@@ -368,23 +356,24 @@
                                         <li>HTML, SCSS(SASS), Node.js, jQuery, JavaScript</li>
                                         <li>2주 (기획, 코딩)</li>
                                     </ul>
-                                    <div class="page3_btn" id="btn02">
-                                        <button class="plan_2"><a href="#!">PLAN</a></button>
-                                        <button><a href="https://wndus3136.github.io/jomalon_london/" target='_blank'>WEB SITE</a></button>
-                                        <button><a href="#!">GITHUB</a></button>
-                                        <!-- <a class="github2" href=""><img src="./icon/github_2.png" alt=""></a> -->
-                                    </div>
+                                </div>
+                                <div class="page3_btn" id="btn02">
+                                    <button class="plan_2"><a href="#!">PLAN</a></button>
+                                    <button><a href="https://wndus3136.github.io/jomalon/" target='_blank'>WEB
+                                            SITE</a></button>
+                                    <button><a href="https://github.com/wndus3136/jomalon" target="_blank">GITHUB</a></button>
+                                    <!-- <a class="github2" href=""><img src="./icon/github_2.png" alt=""></a> -->
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div class="tab_box">
+                        <div class="tab_inner">
                             <div class="tab_img"><img src="./file/web_login_1.png" alt=""></div>
-                            <div class="tab_inner">
-                                <div class="tab_txt">
-                                    <h5>LOGIN/ SIGN UP</h5>
-                                    <p>로그인/ 회원가입 기능 구현</p>
+                            <div class="tab_txt">
+                                <h5>LOGIN/ SIGN UP</h5>
+                                <p>로그인/ 회원가입 기능 구현</p>
+                                <div class="tab_tit">
                                     <ul class="tab_inner_left">
                                         <li>DEVICE</li>
                                         <li>TOOL</li>
@@ -397,24 +386,25 @@
                                         <li>HTML, SCSS(SASS), jQuery, JavaScript</li>
                                         <li>2일 (기획, 코딩)</li>
                                     </ul>
-                                    <div class="page3_btn" id="btn03">
-                                        <button class="plan_3"><a href="#!">PLAN</a></button>
-                                        <button><a href="https://wndus3136.github.io/jomalon_login" target='_blank'>WEB SITE</a></button>
-                                        <button><a href="#!">GITHUB</a></button>
-                                    </div>
+                                </div>
+                                <div class="page3_btn" id="btn03">
+                                    <button class="plan_3"><a href="#!">PLAN</a></button>
+                                    <button><a href="https://wndus3136.github.io/jomalon_login" target='_blank'>WEB
+                                            SITE</a></button>
+                                    <button><a href="https://github.com/wndus3136/jomalon_login" target="_blank">GITHUB</a></button>
                                 </div>
                             </div>
                         </div>
+
                     </li>
                     <li>
-                        <!-- 리엑트 사이트 정보와 내용 넣기 -->
-                        <div class="tab_box">
-                            <!-- 리엑트 사이트 이미지 넣기 -->
-                            <div class="tab_img"><img src="" alt=""></div>
-                            <div class="tab_inner">
-                                <div class="tab_txt">
-                                    <h5>likalika</h5>
-                                    <p>리액트 사이트</p>
+
+                        <div class="tab_inner">
+                            <div class="tab_img"><img src="./file/web_4.png" alt=""></div>
+                            <div class="tab_txt">
+                                <h5>likalika</h5>
+                                <p>리액트 사이트</p>
+                                <div class="tab_tit">
                                     <ul class="tab_inner_left">
                                         <li>DEVICE</li>
                                         <li>TOOL</li>
@@ -424,308 +414,323 @@
                                     <ul class="tab_inner_right">
                                         <li>Web</li>
                                         <li>VScode, Git, Github</li>
-                                        <!-- 여기는 잘 모르니깐 수정필요 -->
-                                        <li>React, HTML, CSS, jQuery, JavaScript</li>
+                                        <li>React, HTML, CSS, JavaScript</li>
                                         <li>3일 (기획, 코딩)</li>
                                     </ul>
-                                    <div class="page4_btn" id="btn04">
-                                        <button class="plan_4"><a href="#!">PLAN</a></button>
-                                        <button><a href="https://wndus3136.github.io/likalika_site" target="_blank">WEB SITE</a></button>
-                                        <button><a href="#!">GITHUB</a></button>
-                                    </div>
+                                </div>
+                                <div class="page4_btn" id="btn04">
+                                    <button class="plan_4"><a href="#!">PLAN</a></button>
+                                    <button><a href="https://wndus3136.github.io/likalika_site" target="_blank">WEB
+                                            SITE</a></button>
+                                    <button><a href="https://github.com/wndus3136/likalika" target="_blank">GITHUB</a></button>
                                 </div>
                             </div>
                         </div>
                     </li>
                 </ul>
-            </div>
-            <div class="plan_pop">
-                <div class="plan_pop_img">
-                    <ul class="plan_tab">
-                        <li class="choice"> Mobile</li>
-                        <li>Tablet</li>
-                        <li>Web</li>
-                    </ul>
-                    <ul class="plan_sheet">
-                        <li>
-                            <video autoplay muted loop src="./image/museum_mobile1.mp4"></video>
-                        </li>
-                        <li>
-                            <video autoplay muted loop src="./image/museum_tablet.mp4"></video>
-                        </li>
-                        <li>
-                            <video autoplay muted loop src="./image/museum_web.mp4"></video>
-                        </li>
-                    </ul>
-                </div>
-                <div class="plan_pop_txt">
-                    <h5>PLAN</h5>
-                    <div class="plan_pop_inner">
-                        <h5>[국립현대미술관]</h5>
-                        <div class="text_inner1 text_inner">
-                            <div class="inner_left">
-                                <p>▶ 프로젝트 소개</p>
-                                <p>▶ 주요기능</p>
-                                <p>▶ 구현한 기능</p>
-                                <p>▶ 기술스텍</p>
-                                <p>▶ URL</p>
-                                <p>▶ 기획의도</p>
+
+                <div class="plan_pop">
+                    <div class="plan_pop_img">
+                        <ul class="plan_tab1 plan_tab">
+                            <li class="choice"> Mobile</li>
+                            <li>Tablet</li>
+                            <li>Web</li>
+                        </ul>
+                        <ul class="plan_sheet1 plan_sheet">
+                            <li>
+                                <video autoplay muted loop src="./image/museum_mobile1.mp4"></video>
+                            </li>
+                            <li>
+                                <video autoplay muted loop src="./image/museum_tablet.mp4"></video>
+                            </li>
+                            <li>
+                                <video autoplay muted loop src="./image/museum_web.mp4"></video>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="plan_pop_txt">
+                        <h5>PLAN</h5>
+                        <div class="plan_pop_inner">
+                            <h5>[국립현대미술관]</h5>
+                            <div class="text_inner1 text_inner">
+                                <div class="inner_left">
+                                    <p>▶ 프로젝트 소개</p>
+                                    <p>▶ 주요기능</p>
+                                    <p>▶ 구현한 기능</p>
+                                    <p>▶ 기술스텍</p>
+                                    <p>▶ URL</p>
+                                    <p>▶ 기획의도</p>
+
+                                </div>
+                                <div class="inner_right">
+                                    <p>국립현대미술관 UI/UX 반응형 웹</p>
+                                    <p>- UI/UX 반응형(모바일/ 테블릿/ 저해상도PC/ 고해상도PC)</p>
+                                    <p>- 12칼럼</p>
+                                    <p>- 이미지 슬라이더</p>
+                                    <p>- 필터 기능</p>
+                                    <p>- 시트탭 기능</p>
+                                    <p>HTML, CSS, jQuery, JavaScript</p>
+                                    <p><a href="https://wndus3136.github.io/GHMuseum" target='_blank'>국립현대미술관</a></p>
+                                    <p>
+                                        전시회 관람을 위해 국립현대미술관 홈페이지를 방문했을 때 <br>
+                                        해당 전시를 찾고 예매까지 이어지는데 다소 어려움을 느꼈습니다. <br>
+                                        이를 개선하여 많은 이용객들에게 도움이 되었으면 하는 마음으로 <br> 개발하게 되었습니다. <br><br>
+
+                                        [기능추가] <br>
+                                        - 자주 사용하는 메뉴는 퀵메뉴로 제작하여 찾기 쉽게! <br>
+                                        - 필터를 사용하여 지역별로 미술관분류! <br>
+                                        - 홈페이지 메인에 뉴스레터와 유튜브 넣어 소식을 빠르게 전달! <br>
+                                        - 디지털 미술관 구현! <br><br>
+
+                                        UI/UX로 홈페이지를 제작함으로써 가독성과 가시성을 높였으며 <br>
+                                        다양한 기능을 추가하여 편리하면서도 유용할 수 있도록 기획했습니다. <br>
+                                    </p>
+                                </div>
 
                             </div>
-                            <div class="inner_right">
-                                <p>국립현대미술관 UI/UX 반응형 웹</p>
-                                <p>- UI/UX 반응형(모바일/ 테블릿/ 저해상도PC/ 고해상도PC)</p>
-                                <p>- 12칼럼</p>
-                                <p>- 이미지 슬라이더</p>
-                                <p>- 필터 기능</p>
-                                <p>- 시트탭 기능</p>
-                                <p>HTML, CSS, jQuery, JavaScript</p>
-                                <p><a href="https://wndus3136.github.io/GHMuseum" target='_blank'>국립현대미술관</a></p>
-                                <p>
-                                    전시회 관람을 위해 국립현대미술관 홈페이지를 방문했을 때 <br>
-                                    해당 전시를 찾고 예매까지 이어지는데 다소 어려움을 느꼈습니다.  <br>
-                                    이를 개선하여 많은 이용객들에게 도움이 되었으면 하는 마음으로 <br> 개발하게 되었습니다. <br><br>
-                                    
-                                    [기능추가] <br>
-                                    - 자주 사용하는 메뉴는 퀵메뉴로 제작하여 찾기 쉽게! <br>
-                                    - 필터를 사용하여 지역별로 미술관분류! <br>
-                                    - 홈페이지 메인에 뉴스레터와 유튜브 넣어 소식을 빠르게 전달! <br>
-                                    - 디지털 미술관 구현! <br><br>
-
-                                    UI/UX로 홈페이지를 제작함으로써 가독성과 가시성을 높였으며 <br>
-                                    다양한 기능을 추가하여 편리하면서도 유용할 수 있도록 기획했습니다. <br>
-                                </p>
-                            </div>
-    
                         </div>
                     </div>
+
+                    <button class="plan_pop_btn">×</button>
                 </div>
 
-                <button class="plan_pop_btn">X</button>
-            </div>
-
-
-
-            <div class="plan_pop2 plan_pop">
-                <div class="plan_pop2_img">
-                    <p>PAGE _ ( main/ sub/ detail )</p>
-                    <div class="plan_pop2_video">
-                        <video autoplay muted loop src="./image/jomalone_web.mp4"></video>
-                    </div>
-                </div>
-                <div class="plan_pop_txt">
-                    <h5>PLAN</h5>
-                    <div class="plan_pop_inner">
-                        <h5>[JOMALON]]</h5>
-                        <div class="text_inner2 text_inner">
-                            <div class="inner_left">
-                                <p>▶ 프로젝트 소개</p>
-                                <p>▶ 주요기능</p>
-                                <p>▶ 구현한 기능</p>
-                                <p>▶ 기술스텍</p>
-                                <p>▶ URL</p>
-                                <p>▶ 기획의도</p>
-
-                            </div>
-                            <div class="inner_right">
-                                <p>조말론런던 적응형 웹</p>
-                                <p>- 컬렉션 홍보 메뉴</p>
-                                <p>- 테스트를 통한 향수추천</p>
-                                <p>- 상황별 제품 추천</p>
-                                <br>
-                                <p>- 페이지네이션</p>
-                                <p>- 필터기능 (서브페이지)</p>
-                                <p>- 포토리뷰 작성 및 등록 (디테일페이지)</p>
-                                <p>HTML, SCSS(SASS), Node.js, jQuery, JavaScript</p>
-                                <p><a href="https://wndus3136.github.io/jomalon_london/" target='_blank'>조말론런던</a></p>
-                                <p>
-                                    MZ세대의 니치향수 관심이 높아지며 국내 소비자들의 <br>
-                                    웹 사이트 빈도가 상승하였습니다. <br>
-                                    웹 접근성과 사용성을 개선하여 정보전달력을 높임으로 <br>
-                                    최종적으로 구매를 유도하고자 하였습니다. <br><br>
-                                    
-                                    [기능추가] <br>
-                                    - 폰트 스타일과, 크기를 조정하여 사용장의 가독성 상승 <br>
-                                    - 원하는 페이지를 쉽게 찾을수 있도록 메뉴배치  <br>
-                                    - 현재 트렌드에 맞는 이슈 컨텐츠를 배치 <br>
-                                    - 정적인 사이트보다 역동적으로 구현 <br><br>
-
-                                    기존의 정적이고 불편함을 개선하고 부가적인 기능을 추가하여 <br>
-                                    상품에 대한 접근성을 높이기 위해 기획했습니다. <br>
-                                </p>
-                            </div>
-    
+                <div class="plan_pop2 plan_pop">
+                    <div class="plan_pop2_img">
+                        <p>PAGE _ ( main/ sub/ detail )</p>
+                        <div class="plan_pop2_video">
+                            <video autoplay muted loop src="./image/jomalon.mp4"></video>
                         </div>
                     </div>
-                </div><!-- txt -->
-                <button class="plan_pop2_btn plan_pop_btn">X</button>
-            </div>
+                    <div class="plan_pop_txt">
+                        <h5>PLAN</h5>
+                        <div class="plan_pop_inner">
+                            <h5>[JOMALON]]</h5>
+                            <div class="text_inner2 text_inner">
+                                <div class="inner_left">
+                                    <p>▶ 프로젝트 소개</p>
+                                    <p>▶ 주요기능</p>
+                                    <p>▶ 구현한 기능</p>
+                                    <p>▶ 기술스텍</p>
+                                    <p>▶ URL</p>
+                                    <p>▶ 기획의도</p>
 
+                                </div>
+                                <div class="inner_right">
+                                    <p>조말론런던 적응형 웹</p>
+                                    <p>- 컬렉션 홍보 메뉴</p>
+                                    <p>- 테스트를 통한 향수추천</p>
+                                    <p>- 상황별 제품 추천</p>
+                                    <br>
+                                    <p>- 페이지네이션</p>
+                                    <p>- 필터기능 (서브페이지)</p>
+                                    <p>- 포토리뷰 작성 및 등록 (디테일페이지)</p>
+                                    <p>HTML, SCSS(SASS), Node.js, jQuery, JavaScript</p>
+                                    <p><a href="https://wndus3136.github.io/jomalon/" target='_blank'>조말론런던</a>
+                                    </p>
+                                    <p>
+                                        MZ세대의 니치향수 관심이 높아지며 국내 소비자들의 <br>
+                                        웹 사이트 빈도가 상승하였습니다. <br>
+                                        웹 접근성과 사용성을 개선하여 정보전달력을 높임으로 <br>
+                                        최종적으로 구매를 유도하고자 하였습니다. <br><br>
 
+                                        [기능추가] <br>
+                                        - 폰트 스타일과, 크기를 조정하여 사용장의 가독성 상승 <br>
+                                        - 원하는 페이지를 쉽게 찾을수 있도록 메뉴배치 <br>
+                                        - 현재 트렌드에 맞는 이슈 컨텐츠를 배치 <br>
+                                        - 정적인 사이트보다 역동적으로 구현 <br><br>
 
-            <div class="plan_pop3 plan_pop">
-                <div class="plan_pop_img">
-                    <ul class="plan_tab3 plan_tab">
-                        <li class="choice3">Login</li>
-                        <li>Sign Up</li>
-                        <li>Flow Chart</li>
-                    </ul>
-                    <ul class="plan_sheet3 plan_sheet">
-                        <li>
-                            <div>
-                                <img src="./file/login.png" alt="">
+                                        기존의 정적이고 불편함을 개선하고 부가적인 기능을 추가하여 <br>
+                                        상품에 대한 접근성을 높이기 위해 기획했습니다. <br>
+                                    </p>
+                                </div>
+
                             </div>
-                        </li>
-                        <li>
-                            <video autoplay muted loop src="./file/signup.mp4"></video>
-                        </li>
-                        <li>
-                            <div>
-                                <img src="./image/chart.png" alt="flowchart">
-                            </div>
-                        </li>
-                    </ul>
-                    <div>
-                        <img src="./image/chart.png" alt="">
-                    </div>
+                        </div>
+                    </div><!-- txt -->
+                    <button class="plan_pop2_btn plan_pop_btn">×</button>
                 </div>
-                <div class="plan_pop3_txt plan_pop_txt">
-                    <h5>PLAN</h5>
-                    <div class="plan_pop_inner">
-                        <h5>[Login/ Sign Up]</h5>
-                        <div class="text_inner3 text_inner">
-                            <div class="inner_left">
-                                <p>▶ 프로젝트 소개</p>
-                                <p>▶ 주요기능</p>
-                                <p>▶ 구현한 기능</p>
-                                <p>▶ 기술스텍</p>
-                                <p>▶ URL</p>
-                                <p>▶ 기획의도</p>
+
+
+
+                <div class="plan_pop3 plan_pop">
+                    <div class="plan_pop_img">
+                        <ul class="plan_tab3 plan_tab">
+                            <li class="choice3">Login</li>
+                            <li>Sign Up</li>
+                            <li>Flow Chart</li>
+                        </ul>
+                        <ul class="plan_sheet3 plan_sheet">
+                            <li>
+                                <div>
+                                    <img src="./file/login.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <video autoplay muted loop src="./file/signup.mp4"></video>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="./image/chart.png" alt="flowchart">
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="plan_pop3_txt plan_pop_txt">
+                        <h5>PLAN</h5>
+                        <div class="plan_pop_inner">
+                            <h5>[Login/ Sign Up]</h5>
+                            <div class="text_inner3 text_inner">
+                                <div class="inner_left">
+                                    <p>▶ 프로젝트 소개</p>
+                                    <p>▶ 주요기능</p>
+                                    <p>▶ 구현한 기능</p>
+                                    <p>▶ 기술스텍</p>
+                                    <p>▶ URL</p>
+                                    <p>▶ 기획의도</p>
+
+                                </div>
+                                <div class="inner_right">
+                                    <p>조말론런던 로그인/ 회원가입</p>
+                                    <br>
+                                    <p>- 로그인 기능 구현</p>
+                                    <p>- 회원가입 기능 구현</p>
+                                    <br>
+                                    <p>- 중복확인</p>
+                                    <p>- 비밀번호 확인</p>
+                                    <p>- 약관동의</p>
+                                    <br>
+                                    <p>HTML, CSS, jQuery, JavaScript</p>
+                                    <br>
+                                    <p>
+                                        <a href="https://wndus3136.github.io/jomalon_login" target='_blank'>Login/ Sign Up</a>
+                                    </p>
+                                    <br>
+                                    <p>
+                                       로그인페이지: 사용자는 아이디와 비밀번호를 입력하여 로그인할 수 있습니다.
+                                       로그인 시도 후에는 이용약약관 동의를 받습니다.
+                                       <br><br>
+
+                                       회원가입 기능: 사용자가 회원가입을 시도하면,
+                                       <br>
+                                       필수 정보를 입력한 후에 아이디 중복 확인을 거칩니다. <br>
+                                       중복이 없을 경우 비밀번호를 입력하고, 비밀번호 확인을 통해 일치 여부를 확인합니다.
+                                       모든 과정이 완료되면 회원가입이 완료됩니다.
+                                       <br><br>
+
+                                       사용자의 편의성과 접근성을 고려하여 프론트엔드를 개발하는 것을 목표로 하였습니다.
+                                       특히 로그인 페이지와 회원가입 기능을 구현하는 과정에서 플로우차트를 이용해 사용자의 초점을 맞추어 개선하였습니다.
+
+                                    </p>
+                                </div>
 
                             </div>
-                            <div class="inner_right">
-                                <p>조말론런던 로그인/ 회원가입</p>
-                                <p>- 로그인 기능 구현</p>
-                                <p>- 회원가입 기능 구현</p>
-                                <p>-</p>
-                                <p>-</p>
-                                <p>HTML, CSS, jQuery, JavaScript</p>
-                                <p><a href="https://wndus3136.github.io/jomalon_login" target='_blank'>Login/ Sign Up</a></p>
-                                <p>
-                                    내용넣기
-                            <!--         MZ세대의 니치향수 관심이 높아지며 국내 소비자들의 <br>
-                                    웹 사이트 빈도가 상승하였습니다. <br>
-                                    웹 접근성과 사용성을 개선하여 정보전달력을 높임으로 <br>
-                                    최종적으로 구매를 유도하고자 하였습니다. <br><br>
-                                    
-                                    [기능추가] <br>
-                                    - 폰트 스타일과, 크기를 조정하여 사용장의 가독성 상승 <br>
-                                    - 원하는 페이지를 쉽게 찾을수 있도록 메뉴배치  <br>
-                                    - 현재 트렌드에 맞는 이슈 컨텐츠를 배치 <br>
-                                    - 정적인 사이트보다 역동적으로 구현 <br><br>
-
-                                    기존의 정적이고 불편함을 개선하고 부가적인 기능을 추가하여 <br>
-                                    상품에 대한 접근성을 높이기 위해 기획했습니다. <br> -->
-                                </p>
-                            </div>
-    
                         </div>
                     </div>
+                    <button class="plan_pop3_btn plan_pop_btn">×</button>
                 </div>
-                <button class="plan_pop3_btn plan_pop_btn">X</button>
-            </div>
-            <!-- plan_pop3 -->
+                <!-- plan_pop3 -->
 
 
-            <div class="plan_pop4 plan_pop">
-                <div class="plan_pop4_img">
-                    <p>likalika</p>
-                    <!--  <video src="">리카리카</video> -->
-                </div>
-                <div class="plan_pop4_txt plan_pop_txt">
-                    <h5>PLAN</h5>
-                    <div class="plan_pop_inner">
-                        <h5>[likalika]]</h5>
-                        <div class="text_inner4 text_inner">
-                            <div class="inner_left">
-                                <p>▶ 프로젝트 소개</p>
-                                <p>▶ 주요기능</p>
-                                <p>▶ 구현한 기능</p>
-                                <p>▶ 기술스텍</p>
-                                <p>▶ URL</p>
-                                <p>▶ 기획의도</p>
-
-                            </div>
-                            <div class="inner_right">
-                                <p>리카리카 리액트사이트</p>
-                                <p>- 장바구니 기능 구현</p>
-                                <p>- 상품 선택시 각 디테일페이지 연결</p>
-                                <p>-</p>
-                                <p>-</p>
-                                <p>React, HTML, CSS, jQuery, JavaScript</p>
-                                <p><a href="https://wndus3136.github.io/likalika_site" target='_blank'>likalika</a></p>
-                                <p>
-                                    내용넣기
-                            <!--         MZ세대의 니치향수 관심이 높아지며 국내 소비자들의 <br>
-                                    웹 사이트 빈도가 상승하였습니다. <br>
-                                    웹 접근성과 사용성을 개선하여 정보전달력을 높임으로 <br>
-                                    최종적으로 구매를 유도하고자 하였습니다. <br><br>
-                                    
-                                    [기능추가] <br>
-                                    - 폰트 스타일과, 크기를 조정하여 사용장의 가독성 상승 <br>
-                                    - 원하는 페이지를 쉽게 찾을수 있도록 메뉴배치  <br>
-                                    - 현재 트렌드에 맞는 이슈 컨텐츠를 배치 <br>
-                                    - 정적인 사이트보다 역동적으로 구현 <br><br>
-
-                                    기존의 정적이고 불편함을 개선하고 부가적인 기능을 추가하여 <br>
-                                    상품에 대한 접근성을 높이기 위해 기획했습니다. <br> -->
-                                </p>
-                            </div>
-    
+                <div class="plan_pop4 plan_pop">
+                    <div class="plan_pop4_img">
+                        <p>likalika</p>
+                        <div class="plan_pop2_video">
+                            <video autoplay muted loop src="./image/likalika.mp4"></video>
                         </div>
                     </div>
-                </div><!-- txt -->
-                <button class="plan_pop4_btn plan_pop_btn">X</button>
+                    <div class="plan_pop4_txt plan_pop_txt">
+                        <h5>PLAN</h5>
+                        <div class="plan_pop_inner">
+                            <h5>[likalika]]</h5>
+                            <div class="text_inner4 text_inner">
+                                <div class="inner_left">
+                                    <p>▶ 프로젝트 소개</p>
+                                    <p>▶ 주요기능</p>
+                                    <p>▶ 기술스텍</p>
+                                    <p>▶ URL</p>
+                                    <p>▶ 기획의도</p>
+
+                                </div>
+                                <div class="inner_right">
+                                    <p>리카리카 리액트사이트</p>
+                                    <br>
+                                    <p>- 장바구니 기능 구현</p>
+                                    <p>- 상품 선택시 각 디테일페이지 연결</p>
+                                    <p>- 다른 페이지에서도 검색결과 상태 유지</p>
+                                    <p>- 실시간 데이터 업데이트</p>
+                                    <br>
+                                    <p>React, HTML, CSS, JavaScript</p>
+                                    <br>
+                                    <p>
+                                        <a href="https://wndus3136.github.io/likalika_site" target='_blank'>likalika</a>
+                                    </p>
+                                    <br>
+                                    <p>
+                                       "리카리카"는 리액트를 사용하여 개발되었으며, <br> 반려동물 용품 온라인 쇼핑 플랫폼입니다. <br><br>
+                                       
+                                       [기능추가] <br>
+                                       - 장바구니에 담기 기능구현, 장바구니에서 상품확인 및 수정. <br>
+                                       - 장바구니에 담긴 상품의 수량을 조절 및 삭제 기능.<br>
+                                       - 서치기능을 통해 상품을 쉽고 빠르게 찾아 서치페이지와 연동. <br>
+                                       <br>
+   
+                                       리액트: 컴포넌트 기반 아키텍쳐를 활용하여 유연하고 재사용 가능한 코드를 작성하였습니다.
+                                       <br>
+                                       상태관리 라이브러리: Recux 상태 관리 라이브러리를 활용하여 전역 상태 관리를 구현하였습니다.
+                                       <br>
+                                       라우팅: React Router를 사용하여 페이지 간의 이동을 관리하고 사용자 경험을 향상 시켰습니다.
+                                       <br><br>
+                                       리액트를 사용하여 사용자 중심의 UI/UX를 고려하여 사용자들에게 편리한 경험을 제공하는 개발경험을 쌓을 수 있었습니다.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="plan_pop4_btn plan_pop_btn">×</button>
+                </div> <!-- plan_pop4 -->
             </div>
-            <!-- plan_pop4 -->
-
-
-
-
-
-
-
-
-
         </div>
         <div id="page4">
-            <div class="page_box">
+            <!-- <img class="wrap_bg" src="./image/back_1.jpg" alt="back_1"> -->
+            <div class="page_box page_container">
                 <p>Content</p>
                 <div class="blink"> Click me !</div>
                 <div class="blink1"> Click me !</div>
-                <ul class="content_icon">
-                    <li>
-                        <img src="./icon/content_1.png" alt="">
-                    </li>
-                    <li>
-                        <img src="./icon/content_2.png" alt="">
-                    </li>
-                    <li>
-                        <img src="./icon/content_3.png" alt="">
-                    </li>
-                    <li>
-                        <img src="./icon/content_4_1.png" alt="">
-                    </li>
-                </ul>
-                <ul class="content_txt">
-                    <li>
-                        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wndus3136@gmail.com"
-                            target="_blank">wndus3136@gmail.com</a>
-                    </li>
-                    <li>010-6242-8520</li>
-                    <li>부산광역시 부산진구 부전 <span>(서울 거주가능)</span></li>
-                    <li><a href="https://juyeon3136.tistory.com"> https://juyeon3136.tistory.com</a></li>
-                </ul>
+
+
+                <div class="img2">
+                    <img src="./image/img_3_1.jpg" alt="img3">
+                </div>
+                <div class="content_info">
+                    <ul class="content_icon">
+                       
+                        <li>
+                            <img src="./icon/content_1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./icon/content_2.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./icon/content_3.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./icon/content_4_3.png" alt="">
+                        </li>
+                       
+                    </ul>
+                    <ul class="content_txt">
+                        <li>
+                            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wndus3136@gmail.com"
+                                target="_blank">wndus3136@gmail.com</a>
+                        </li>
+                        <li>010-6242-8520</li>
+                        <li>서울 중구 신당동</li>
+                        <li><a href="https://juyeon3136.tistory.com"> https://juyeon3136.tistory.com</a></li>
+                    </ul>
+                </div>
+
                 <div class="email">
                     <h5>메일을 작성해주세요.</h5>
                     <input type="text" name="name" placeholder="보내시는 곳을 입력해주세요">
@@ -734,12 +739,7 @@
                     <textarea name="message" rows="5" placeholder="내용을 입력해주세요 "></textarea>
                     <input type="button" name="submit" class="btn white" value="메일 보내기" />
                 </div>
-                <div class="img2">
-                    <div>
-                        <img src="./image/img_3_1.jpg" alt="img3">
-                    </div>
-
-                </div>
+               
 
 
                 <h1>Thank you :)</h1>
