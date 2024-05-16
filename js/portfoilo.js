@@ -171,15 +171,15 @@ $(function () {
     const pageBack = document.querySelector('#page_back')
 
     tab1.addEventListener('click', function () {
-        pageBack.src = "./image/back_1.jpg"
-    });
-
-    tab2.addEventListener('click', function () {
         pageBack.src = "./image/back_2.jpg"
     });
 
-    tab3.addEventListener('click', function () {
+    tab2.addEventListener('click', function () {
         pageBack.src = "./image/back_3.jpg"
+    });
+
+    tab3.addEventListener('click', function () {
+        pageBack.src = "./image/back_1.jpg"
     });
 
     tab4.addEventListener('click', function () {
